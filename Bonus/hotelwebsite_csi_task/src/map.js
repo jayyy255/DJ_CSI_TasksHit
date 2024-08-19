@@ -1,5 +1,5 @@
 import React from 'react';
-import './map.css'; // Import the CSS file for styling
+import './map.css'; 
 
 const MapWithOverlay = ({ mapSrc, location }) => {
   return (
