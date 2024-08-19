@@ -1,30 +1,27 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/header';
-import Footer from './components/footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/header'; 
+import Footer from './components/Footer'; 
 import './App.css';
-
-
-function Home() {
-  return (
-    <div className='text-black'>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the homepage of the website.</p>
-    </div>
-  );
-}
-
+import HomePage from './HomePage';
+import MembershipSection from './MembershipSection';
+import Learnmore from './learnmore';
+import Blog from './blog'
 
 function App() {
   return (
     <Router>
+      <div>
       <Header />
-      <div className="content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* Add more routes here for other pages */}
-        </Routes>
+     
+       
+          <HomePage />
+          <MembershipSection />
+          <Learnmore />
+          <Blog />
+
+          <Footer />
       </div>
-      <Footer />
+    
     </Router>
   );
 }
