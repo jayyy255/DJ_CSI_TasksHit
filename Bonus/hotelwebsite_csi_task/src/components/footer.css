@@ -1,103 +1,138 @@
 .footer {
-    display: flex;
-    flex-direction: row;  
-    align-items: flex-start;
-    padding: 20px;
-    overflow: hidden;
-    margin-top: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-   
-  }
-  
-  .infof-container {
-    display: flex;  
-    flex-direction: column;  
-    width: 30%; 
-    box-sizing: border-box;
-   
-  }
-  
-  .infof {
-    flex: 0 0 auto;  
-    padding-right: 20px;
-    color: #808080;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+  overflow: hidden;
+  margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-wrap: wrap;  
+}
+
+.infof-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.infof {
+  flex: 0 0 auto;
+  padding-right: 20px;
+  color: #808080;
   width: 500px;
-  position: relative;  
+  position: relative;
   left: 90px;
-  }
-  #lore{
-    width: 250px;
-  }
-  
-  .button-container {
-    display: flex;  
-    gap: 20px;  
-    margin-top: 20px;
-    min-height: 40px;  
-  }
-  
-  .fb, .insta, .gg {
-    background-size: cover;  
-    background-position: center;  
-    background-repeat: no-repeat;  
-    width: 21px;  
-    height: 21px;  
-    border-radius: 50%;  
-    border: none;  
-    cursor: pointer;  
-    padding: 0;  
-    margin: 0; 
-  }
-  
-  .fb {
-    background-image: url('../assets/fb.png');
-  }
-  
-  .insta {
-    background-image: url('../assets/instalogo.png');
-  }
-  
-  .gg {
-    background-image: url('../assets/gg.png');
-  }
-  
-  .insta:hover, .fb:hover, .gg:hover {
-    transform: scale(1.05); 
-  }
-  
-  .home {
-    
-    flex: 1;  
-    position: relative;
-    bottom: 40px;
-    margin-left: 20px;
-    cursor: pointer;
+}
+
+#lore {
+  width: 250px;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  min-height: 40px;
+}
+
+.fb, .insta, .gg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.fb {
+  background-image: url('../assets/fb.png');
+}
+
+.insta {
+  background-image: url('../assets/instalogo.png');
+}
+
+.gg {
+  background-image: url('../assets/gg.png');
+}
+
+.insta:hover, .fb:hover, .gg:hover {
+  transform: scale(1.05);
+}
+
+.home, .help, .getapp {
+  flex: 1;
+  position: relative;
+  bottom: 40px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#hom, #hel, #getap {
+  font-size: 30px;
+}
+
  
-  }
-  #hom{
-    font-size: 30px;
-  }
-  .help{
-    flex: 1;  
-    position: relative;
-    bottom: 40px;
-    margin-left: 20px;
-    cursor: pointer;
-  }
-  #hel{
-    font-size: 30px;
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column;  
+    align-items: center; 
+    text-align: center;
   }
 
+  .infof {
+    width: 100%;  
+    left: 0; 
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
 
-  .getapp {
-    flex: 1;  
-    position: relative;
-    bottom: 40px;
-    margin-left: 20px; 
-    cursor: pointer;  
+  .home, .help, .getapp {
+    margin-left: 0; 
+    bottom: 0;  
+    margin-bottom: 20px;
   }
-  #getap{
-    font-size: 30px;
+
+  #hom, #hel, #getap {
+    font-size: 25px;  
   }
-  
-  
+}
+
+@media (max-width: 768px) {
+  .infof-container {
+    width: 100%;  
+  }
+
+  .button-container {
+    justify-content: center;  
+  }
+
+  #hom, #hel, #getap {
+    font-size: 22px;  
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;  
+    margin-top: 50px;  
+  }
+
+  .infof {
+    font-size: 14px; 
+  }
+
+  .home, .help, .getapp {
+    font-size: 18px; 
+  }
+
+  .fb, .insta, .gg {
+    width: 18px;  
+    height: 18px;
+  }
+}

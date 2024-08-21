@@ -1,103 +1,190 @@
- .map-container {
-    position: relative;
-    width: 100%;
-    height: 450px;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  
-  .map-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    filter: grayscale(100%) contrast(90%);
-  }
-  
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 450px; 
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 80px;  
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(100%) contrast(90%);
+}
+
+.overlay-box {
+  position: absolute;
+  bottom: 90px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.location-details {
+  max-width: 55%;
+  flex: 1;
+}
+
+.location-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.location-description {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.email-input {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  margin-right: 10px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #218838;
+}
+
+.map-pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+ 
+@media (max-width: 1024px) {
   .overlay-box {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    padding: 20px 40px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 15px 25px;
+    bottom: 25px; 
   }
-  
-  .location-details {
-    max-width: 55%;
-    flex: 1;
-  }
-  
+
   .location-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
-    margin: 0;
+    font-size: 1.3rem;
   }
-  
-  .location-description {
-    font-size: 1rem;
-    color: #666;
-    margin-top: 10px;
-  }
-  
-  .contact-form {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex: 1;
-  }
-  
+
   .email-input {
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    outline: none;
-    margin-right: 10px;
-    font-size: 1rem;
-    width: 250px;
+    width: 200px;
   }
-  
-  .contact-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    right: 50px;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 25px;
-    background-color: #28a745;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    padding-bottom: 100px;  
+  }
+
+  .overlay-box {
+    flex-direction: column;
+    padding: 15px 20px;
+    bottom: 20px;  
+  }
+
+  .location-details {
+    max-width: 100%;
+    margin-bottom: 15px;
     text-align: center;
-    transition: background-color 0.3s ease;
   }
-  
-  .contact-button:hover {
-    background-color: #218838;
+
+  .contact-form {
+    justify-content: center;
+    width: 100%;
   }
-   
+
+  .email-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contact-button {
+    width: 100%;
+    text-align: center;
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    height: 300px;
+    padding-bottom: 120px; 
+  }
+
+  .overlay-box {
+    padding: 10px 15px;
+    bottom: 10px;  
+  }
+
+  .location-title {
+    font-size: 1.2rem;
+  }
+
+  .location-description {
+    font-size: 0.9rem;
+  }
+
+  .email-input {
+    width: 100%;
+  }
+
+  .contact-button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
   .map-pointer {
-    position: absolute;
-    top: 231px;  
-    right: 691px;
-    transform: translate(-50%, -50%);
-    width: 20px;  
-    height: 20px;
-    background-color: green;
-    border-radius: 50%;
-    animation: blink 1s infinite;
+    width: 15px;
+    height: 15px;
   }
-  
-  @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+}
