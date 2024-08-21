@@ -3,7 +3,7 @@ import homepageimg from './assets/pic1.png';
 
 const HomePage = () => {
   return (
-    <div className="flex bg-gray-200 w-screen h-[700px]">
+    <div className="flex bg-gray-200 w-100% h-[700px]">
      
       <div className="flex flex-col justify-center p-8 w-[60%] h-full">
         <h1 className="text-black text-7xl font-bold">
