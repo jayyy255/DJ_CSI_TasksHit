@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex items-center text-white">
             <img
               src={nexcenticon}
-              alt="Nexcent Logo"  // Added alt attribute for accessibility
+              alt="Nexcent Logo"  
               className="h-10 mr-3"
             />
             <span className="text-2xl font-semibold">Nexcent</span>
@@ -17,7 +17,7 @@ const Footer = () => {
           <p className="mt-2">&copy; 2020 Landify UI Kit. All rights reserved.</p>
           <div className="flex mt-4 space-x-4">
             <a href="#" className="hover:text-white">
-              <i className="fab fa-instagram"></i> {/* Ensure Font Awesome is correctly imported */}
+              <i className="fab fa-instagram"></i>  
             </a>
             <a href="#" className="hover:text-white">
               <i className="fab fa-globe"></i>
